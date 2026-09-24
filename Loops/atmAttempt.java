@@ -15,6 +15,7 @@ public class atmAttempt {
             else {
                 System.out.println((i-1)+" atempt reamining!");
             }
+            sc.close();
 
         }
     }
