@@ -32,9 +32,12 @@ class Student {
 public class StudentResult {
     public static void main(String[] args) {
         Student std1 = new Student();
-        System.out.println("=============BANK ACCOUNT DETAILS=============");
+
         std1.setRollNo(1111113);
         std1.setTotalMarks(397);
+        System.out.println("=============Student Details=============");
+        System.out.println("Name: "+std1.name);
+        System.out.println("Roll no: "+ std1.getRollNo());
         System.out.println("Grade: "+std1.gradeCalculator());
     }
 }
