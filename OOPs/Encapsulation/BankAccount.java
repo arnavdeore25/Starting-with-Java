@@ -30,6 +30,21 @@ class AccountDetails
         this.accountBalance = accountBalance;
     }
     
+    public void deposit(int amount) {
+        this.accountBalance += amount;
+        System.out.println(amount+ " Rupees Successfully Deposited!");
+    }
+
+    public void withdraw(int amount) {
+        this.accountBalance -= amount;
+        System.out.println(amount+ " Rupees Successfully Withdrawn!");
+    }
+
+    public int displayBalance() {
+        return this.accountBalance;
+    }
+
+
 }
 
 public class BankAccount {
@@ -42,5 +57,12 @@ public class BankAccount {
         System.out.println(acc1.getAccountNumber());
         System.out.println(acc1.getAccountHolder());
         System.out.println(acc1.getAccountBalance());
+        System.out.println("=============Operations Performed=============");
+        System.out.println("10000 deposit");
+        acc1.deposit(10000);
+        System.out.println("15000 Withdraw");
+        acc1.withdraw(15000);
+        System.out.println("Balance: "+acc1.displayBalance());
+        
     }
 }
