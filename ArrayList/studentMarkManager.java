@@ -33,5 +33,6 @@ public class studentMarkManager {
         int tempMark = sc.nextInt();
         marks.remove(tempMark);
         System.out.println("After removing:\n"+marks);
+        sc.close();
     }
 }
