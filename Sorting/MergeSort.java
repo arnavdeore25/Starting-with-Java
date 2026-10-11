@@ -15,7 +15,9 @@ public class MergeSort {
             rightArr[j] = arr[median + 1 + j];
         }
 
-        int i = 0, j = 0, k = low;
+        int i = 0;
+        int j = 0;
+        int k = low;
 
         while (i < sizeLeft && j < sizeRight) {
             if (leftArr[i] <= rightArr[j]) {
