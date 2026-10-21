@@ -32,5 +32,26 @@ public class Pattern5 {
             System.out.println();
         }
 
+//Single Outer Loop
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter value of n: ");
+        int n = sc.nextInt();
+        int col = 1;
+        for(int i=1; i<=2*n-1; i++)
+        {
+            for(int j=1; j<=col; j++)
+            {
+                System.out.print("* ");
+            }
+            if(i<n){
+                col++;
+            }
+            else{
+                col--;
+            }
+            System.out.println();
+
+        }
+        sc.close();
     }
 }
