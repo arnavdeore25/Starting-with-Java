@@ -26,10 +26,27 @@ class RichCustomer {
         }
         return max;
     }
+    public static int optimizedSolution(int[][] accounts) {
+        int max = accounts[0][0];
+        for(int i=0; i<accounts.length; i++)
+        {
+            int totalSum = 0;
+            for(int j=0; j<accounts[i].length; j++)
+            {
+                totalSum += accounts[i][j];
+            }
+            if(totalSum>max)
+                max = totalSum;
+        }
+        return max;
+    }
+    
     public static void main(String[] args) {
         int[][] accounts = {{1, 2,1,1, 4}, {1,2,3,4,5}, {3,2, 4, 0, 0},{1,2,1,4, 5}};
 
         int result = solution(accounts);
         System.out.println("Richest customer's wealth: "+result);
+        int result2 = optimizedSolution(accounts);
+        System.out.println("Richest customer's wealth (optimized solution): "+result2);
     }
 }
