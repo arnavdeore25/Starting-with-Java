@@ -39,7 +39,7 @@ public class Pattern6 {
                 col--;
             }
             System.out.println();
-
+            sc.close();
         }
     }
 }
