@@ -1,0 +1,7 @@
+/**
+ * LinearSearch
+ */
+public class LinearSearch {
+
+    
+}
