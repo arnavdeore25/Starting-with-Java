@@ -28,6 +28,15 @@ class LL
         }
     }
 
+    void insertBegin(int data)
+    {
+        Node newNode = new Node();
+        newNode.data = data;
+        newNode.next = head;
+        head = newNode;
+
+    }
+
     void displayList()
     {
         Node temp = head;
@@ -47,6 +56,7 @@ class singlyLinkedList {
         list.insertEnd(10);
         list.insertEnd(20);
         list.insertEnd(30);
+        list.insertBegin(90);
         list.displayList();
     }
 }
