@@ -49,7 +49,7 @@ class LL
         }
         else
         {
-            while (count < position)
+            while (count < position-1)
             {
                 temp=temp.next;
                 count++;
@@ -60,7 +60,7 @@ class LL
         
 
     }
-
+    
     void displayList()
     {
         Node temp = head;
