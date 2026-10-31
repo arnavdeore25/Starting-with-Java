@@ -60,7 +60,21 @@ class LL
         
 
     }
-    
+
+    void deleteNode(int position)
+    {
+        Node temp = head;
+        int count = 1;
+        while (count < position-1)
+        {
+            temp = temp.next;
+            count++;
+        }
+        temp.next= temp.next.next;
+        System.out.println("After deletion");
+        displayList();
+    }
+
     void displayList()
     {
         Node temp = head;
@@ -83,5 +97,6 @@ class singlyLinkedList {
         list.insertBegin(90);
         list.insertAtPosition(15, 1);
         list.displayList();
+        list.deleteNode(3);
     }
 }
