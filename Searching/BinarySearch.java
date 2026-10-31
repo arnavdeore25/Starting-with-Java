@@ -30,3 +30,5 @@ public class BinarySearch {
             System.out.println("Element present at index: "+index);
     }
 }
+
+//time complexity : O(log n)
