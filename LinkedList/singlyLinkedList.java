@@ -43,13 +43,22 @@ class LL
         newNode.data = data;
         int count = 1;
         Node temp = head;
-        while (count < position-1)
+        if(position == 1)
         {
-            temp=temp.next;
-            count++;
+            insertBegin(data);
         }
-        newNode.next = temp.next;
-        temp.next = newNode;
+        else
+        {
+            while (count < position)
+            {
+                temp=temp.next;
+                count++;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+        
+
     }
 
     void displayList()
@@ -72,7 +81,7 @@ class singlyLinkedList {
         list.insertEnd(20);
         list.insertEnd(30);
         list.insertBegin(90);
-        list.insertAtPosition(100, 2);
+        list.insertAtPosition(15, 1);
         list.displayList();
     }
 }
