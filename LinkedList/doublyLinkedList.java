@@ -33,6 +33,16 @@ public class doublyLinkedList {
         }   
     }
 
+    public void insertBegin(int value)
+    {
+        Node newNode = new Node(value);
+        newNode.next=head;
+        if(head!=null)
+            head.prev=newNode;
+        
+        head=newNode;
+    }
+
     public void displayList()
     {
         Node temp = head;
@@ -47,6 +57,7 @@ public class doublyLinkedList {
         doublyLinkedList list = new doublyLinkedList();
         list.insertEnd(10);
         list.insertEnd(20);
+        list.insertBegin(100);
         list.displayList();
     }
 
