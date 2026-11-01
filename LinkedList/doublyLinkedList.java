@@ -42,6 +42,26 @@ public class doublyLinkedList {
         
         head=newNode;
     }
+    public void insertAtPosition(int value, int position)
+    {
+        Node newNode = new Node(value);
+        if(position ==1)
+        {
+            insertBegin(value);   
+        }
+        else
+        {
+            Node temp = head;
+            for(int i=1; i<position-1; i++)
+            {
+                temp = temp.next;
+            }
+            newNode.next=temp.next.next;
+            newNode.prev = temp;
+            temp.next=newNode;
+        }
+
+    }
 
     public void displayList()
     {
@@ -58,6 +78,10 @@ public class doublyLinkedList {
         list.insertEnd(10);
         list.insertEnd(20);
         list.insertBegin(100);
+        list.insertBegin(200);
+        list.insertBegin(230);
+        list.insertAtPosition(400, 3);
+        list.insertAtPosition(19, 1);
         list.displayList();
     }
 
