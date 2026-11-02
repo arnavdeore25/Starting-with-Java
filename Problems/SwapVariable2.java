@@ -8,6 +8,12 @@ public class SwapVariable2 {
         b = a-b;
         a = a-b;
 
+        //using bitwise operator
+        a = 10;
+        b = 20;
+        a = a^b;
+        b = b^a;
+        a = a^b;
         System.out.println("A = "+a+"\nB = "+b);
     }
 }
