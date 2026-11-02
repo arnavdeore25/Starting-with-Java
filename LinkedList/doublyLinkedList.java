@@ -63,6 +63,21 @@ public class doublyLinkedList {
 
     }
 
+    public void deletion(int position)
+    {
+        Node temp = head;
+        int count=1;
+        while (count < position-1) 
+        {
+            temp=temp.next;
+            count++;    
+        }
+        Node target = temp.next;
+        Node nextNode = target.next;
+        temp.next = nextNode;
+        nextNode.prev = temp;
+    }
+
     public void displayList()
     {
         Node temp = head;
@@ -82,6 +97,7 @@ public class doublyLinkedList {
         list.insertBegin(230);
         list.insertAtPosition(400, 3);
         list.insertAtPosition(19, 1);
+        list.deletion(3);
         list.displayList();
     }
 
