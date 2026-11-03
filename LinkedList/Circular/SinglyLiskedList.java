@@ -32,7 +32,16 @@ public class SinglyLiskedList {
             head = temp;
         }
     }
-
+    public static void insertEnd(int value)
+    {
+        Node temp = new Node(value);
+        Node dummy = head;
+        do{
+            dummy=dummy.next;
+        }while(dummy.next!=head);
+        dummy.next = temp;
+        temp.next = head;
+    }
     public static void displayList()
     {
         Node dummy = head;
@@ -45,6 +54,7 @@ public class SinglyLiskedList {
     public static void main(String[] args) {
         insertBegin(10);
         insertBegin(20);
+        insertEnd(100);
         displayList();
     }
 }
