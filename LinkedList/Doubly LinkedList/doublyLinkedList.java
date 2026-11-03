@@ -1,5 +1,3 @@
-package LinkedList;
-
 public class doublyLinkedList {
     
     Node head;
