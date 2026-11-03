@@ -42,6 +42,26 @@ public class SinglyLiskedList {
         dummy.next = temp;
         temp.next = head;
     }
+
+    public static void insertAtPosition(int value, int position)
+    {
+        if(position == 1)
+            insertBegin(value);
+
+        Node temp = new Node(value);
+        Node dummy  = head;
+        int count =1;
+
+        while(count < position - 1 && dummy.next != head)
+        {
+            dummy = dummy.next;
+            count++;
+        }
+
+        temp.next = dummy.next;
+        dummy.next = temp;
+    } 
+
     public static void displayList()
     {
         Node dummy = head;
@@ -55,6 +75,7 @@ public class SinglyLiskedList {
         insertBegin(10);
         insertBegin(20);
         insertEnd(100);
+        insertAtPosition(600, 2);
         displayList();
     }
 }
