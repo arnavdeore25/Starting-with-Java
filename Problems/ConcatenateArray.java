@@ -28,3 +28,5 @@ class ConcatenateArray {
         }
     }
 }
+
+//time complexity: o(n)

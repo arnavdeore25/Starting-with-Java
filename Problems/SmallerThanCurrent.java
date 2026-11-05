@@ -27,3 +27,5 @@ class smallerThanCurrent {
         }
     }
 }
+
+//time complexity: o(n2)

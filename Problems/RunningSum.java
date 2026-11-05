@@ -32,3 +32,5 @@ class RunningSum {
         }
     }
 }
+
+//time complexity: o(n2)

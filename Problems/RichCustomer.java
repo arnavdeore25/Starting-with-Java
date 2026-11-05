@@ -50,3 +50,5 @@ class RichCustomer {
         System.out.println("Richest customer's wealth (optimized solution): "+result2);
     }
 }
+
+//time complexity: o(n2)
