@@ -19,7 +19,7 @@ class smallerThanCurrent {
         return sol;
     }
     public static void main(String[] args) {
-        int arr1[] = {1,2,3,4,5,6,7};
+        int arr1[] = {8, 1, 2,7};
         int arr2[] = findSmaller(arr1);
         for(int i=0; i<arr2.length;i++)
         {
