@@ -9,7 +9,7 @@ class Node
         this.data = data;
     }
 }  
-public class SinglyLiskedList {
+public class SinglyLinkedList {
     static Node head = null;
 
     public static void insertBegin(int value)
