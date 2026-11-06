@@ -62,6 +62,38 @@ public class SinglyLiskedList {
         dummy.next = temp;
     } 
 
+    public static void deleteAtPosition(int position)
+    {
+        if(head == null || position < 1)
+        {
+            System.out.println("Invalid Position");
+            return;
+        }
+        if(position==1)
+        {
+            Node temp=head;
+            while(temp.next!=head)
+            {
+                temp=temp.next;
+            }
+            head=head.next;
+            temp.next=head;
+        }
+        else
+        {
+            int i=1;
+            Node temp = head;
+            while(i<position-1)
+            {
+                temp=temp.next;
+                i++;
+            }
+            temp.next=temp.next.next;
+        }
+        System.out.println("After deletion");
+        displayList();
+    }
+
     public static void displayList()
     {
         Node dummy = head;
@@ -77,5 +109,6 @@ public class SinglyLiskedList {
         insertEnd(100);
         insertAtPosition(600, 2);
         displayList();
+        deleteAtPosition(1);
     }
 }
