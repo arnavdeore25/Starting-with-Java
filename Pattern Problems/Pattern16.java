@@ -18,7 +18,6 @@ public class Pattern16 {
                 if(j==1|| i==n)
                 {
                     System.out.print("* ");
-
                 }
                 else
                 {
